@@ -1,0 +1,295 @@
+Below is a **ready‑to‑use “Home” page** with a clean layout, responsive design, and a touch of modern styling.  
+Save the two snippets into **two separate files**:
+
+| File | Purpose | How to use |
+|------|---------|------------|
+| `index.html` | The HTML structure | Open in a browser |
+| `style.css` | The visual styling | Link to it from the `<head>` of the HTML |
+
+---
+
+## 1️⃣ index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home – My Awesome Site</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Optional: Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">MySite</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero__content">
+      <h2>Welcome to My Awesome Site</h2>
+      <p>Your one‑stop solution for web design, development, and content creation.</p>
+      <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Web Design</h3>
+          <p>Responsive, modern designs that convert.</p>
+        </article>
+        <article class="card">
+          <h3>Development</h3>
+          <p>Front‑end & back‑end solutions tailored to your needs.</p>
+        </article>
+        <article class="card">
+          <h3>Content Writing</h3>
+          <p>Engaging copy that tells your brand story.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I’m a passionate developer and writer who loves turning ideas into functional, beautiful web experiences.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="#" method="post" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 MySite. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+```
+
+---
+
+## 2️⃣ style.css
+
+```css
+/* ----------------------------------------------------
+   Base Reset & Global Styles
+---------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7fb;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------
+   Header & Navigation
+---------------------------------------------------- */
+.site-header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.nav {
+  margin-top: 0.5rem;
+}
+.nav a {
+  margin-right: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------
+   Hero Section
+---------------------------------------------------- */
+.hero {
+  background: url('https://picsum.photos/1920/1080?blur=2') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 0;
+}
+.hero__content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero__content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn-primary {
+  background: #ff5a5f;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #e04c4f;
+}
+
+/* ----------------------------------------------------
+   Services Section
+---------------------------------------------------- */
+.services {
+  padding: 4rem 0;
+  background: #fff;
+}
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin-top: 0;
+}
+
+/* ----------------------------------------------------
+   About Section
+---------------------------------------------------- */
+.about {
+  padding: 4rem 0;
+  background: #f9fafc;
+}
+.about h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------------------------
+   Contact Section
+---------------------------------------------------- */
+.contact {
+  padding: 4rem 0;
+  background: #fff;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+.contact-form button {
+  align-self: start;
+}
+
+/* ----------------------------------------------------
+   Footer
+---------------------------------------------------- */
+.site-footer {
+  background: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+```
+
+---
+
+### How it works
+
+1. **Open** the two files in the same folder (`index.html` + `style.css`).
+2. **Open** `index.html` in any modern browser (Chrome, Firefox, Edge, Safari).
+3. **Scroll** to see the sections: Hero → Services → About → Contact.
+4. **Resize** the browser window to see the responsive grid in the Services section.
+
+Feel free to replace the placeholder text, images, and colors with your own content. Happy coding!

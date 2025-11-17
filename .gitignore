@@ -1,0 +1,37 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+Output/
+*.spec
+*.pkg
+*.toc
+*.zip
+
+# Executables and installers
+*.exe
+*.msi
+
+# Logs and runtime output
+logs/
+*.log
+
+# Environment configuration
+.env
+*.env
+
+# IDE and editor settings
+.vscode/
+*.code-workspace
+.idea/
+
+# Miscellaneous
+*.bak

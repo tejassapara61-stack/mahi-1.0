@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Awesome Homepage</title>
+
+  <!-- Link to external CSS -->
+  <style>
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body, h1, h2, p, ul, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img, video {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f4;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------
+   Header
+------------------------------------------------------------- */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.75rem 0;
+}
+.site-header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #005a87;
+}
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav a {
+  color: #333;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #005a87;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    display: none;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* -------------------------------------------------------------
+   Hero section
+------------------------------------------------------------- */
+.hero {
+  background: url('hero-placeholder.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.btn-primary {
+  background: #005a87;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: #00456b;
+}
+
+/* -------------------------------------------------------------
+   Feature block
+------------------------------------------------------------- */
+.feature {
+  background: #fff;
+  padding: 3rem 0;
+}
+.feature-grid {
+  display: grid;
+  gap: 2rem;
+}
+.feature-item {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: center;
+}
+.feature-item h2 {
+  margin-bottom: 0.75rem;
+}
+
+/* -------------------------------------------------------------
+   Call‑to‑action
+------------------------------------------------------------- */
+.cta {
+  background: #005a87;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0;
+}
+.btn-secondary {
+  background: #fff;
+  color: #005a87;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+/* -------------------------------------------------------------
+   Footer
+------------------------------------------------------------- */
+.site-footer {
+  background: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 0;
+}
+.site-footer p {
+  font-size: 0.9rem;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ================== HEADER ================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo">MyBrand</a>
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================== HERO ================== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to My Awesome Homepage</h1>
+      <p>We build beautiful, functional web experiences.</p>
+      <a href="#" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- ================== MAIN CONTENT ================== -->
+  <main class="site-main">
+
+    <!-- Feature block -->
+    <section class="feature">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <h2>Feature One</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae.</p>
+          </div>
+          <div class="feature-item">
+            <h2>Feature Two</h2>
+            <p>Aliquam eget nisl non metus viverra consequat. Cras vel.</p>
+          </div>
+          <div class="feature-item">
+            <h2>Feature Three</h2>
+            <p>Proin non libero id sapien posuere porta. Donec vel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call‑to‑action -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to start?</h2>
+        <p>Contact us today and let’s bring your vision to life.</p>
+        <a href="#" class="btn-secondary">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================== FOOTER ================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 MyBrand. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript for mobile menu -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
+
