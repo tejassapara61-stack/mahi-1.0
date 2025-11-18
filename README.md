@@ -140,6 +140,5 @@ Once running:
 - Extend automation to handle email/WhatsApp/Telegram sending flows end-to-end.
 - Adopt async message queues for image generation to avoid blocking the main loop.
 
----
 
 Made with love to showcase an end-to-end AI desktop companion. Contributions and issue reports are welcome.
